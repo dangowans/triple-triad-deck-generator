@@ -10,7 +10,7 @@ const elementNames = Object.keys(ELEMENTS);
 
 // Monster face components
 const MONSTER_EYES = ['👀', '◉◉', '●●', '○○', '◕◕', '◔◔', '◐◐', '⊙⊙'];
-const MONSTER_MOUTHS = ['😃', '😄', '😁', '😊', '😆', '🙂', '😋', '😛', '😝', '😜'];
+const MONSTER_MOUTHS = ['◡', '◠', '⌣', '⌢', 'ω', 'v', 'u', '︵', '︶', '﹏'];
 const MONSTER_HEAD_SHAPES = ['circle', 'square', 'triangle', 'oval'];
 
 // Element to skin color mapping
