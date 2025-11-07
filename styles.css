@@ -178,40 +178,6 @@ button:hover {
     right: 10px;
 }
 
-.monster-face {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.monster-head {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.monster-eyes {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
-.monster-mouth {
-    font-size: 24px;
-}
-
 .card.fire {
     background: linear-gradient(145deg, #ffebee, #ffcdd2);
     border-color: #d32f2f;
