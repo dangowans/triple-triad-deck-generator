@@ -108,9 +108,18 @@ button:hover {
 
 .card-number {
     position: absolute;
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -3px 0 0 #000,
+        3px 0 0 #000,
+        0 -3px 0 #000,
+        0 3px 0 #000;
 }
 
 .card-number.top {
@@ -168,17 +177,9 @@ button:hover {
     border-color: #d32f2f;
 }
 
-.card.fire .card-number {
-    color: #b71c1c;
-}
-
 .card.water {
     background: linear-gradient(145deg, #e3f2fd, #bbdefb);
     border-color: #1976d2;
-}
-
-.card.water .card-number {
-    color: #0d47a1;
 }
 
 .card.wind {
@@ -186,17 +187,9 @@ button:hover {
     border-color: #689f38;
 }
 
-.card.wind .card-number {
-    color: #33691e;
-}
-
 .card.earth {
     background: linear-gradient(145deg, #efebe9, #d7ccc8);
     border-color: #5d4037;
-}
-
-.card.earth .card-number {
-    color: #3e2723;
 }
 
 /* Print styles */
@@ -240,7 +233,7 @@ button:hover {
     }
     
     .card-number {
-        font-size: 24px;
+        font-size: 36px;
     }
     
     .element-symbol {
