@@ -45,6 +45,11 @@ h1 {
     color: #555;
 }
 
+.control-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
 .control-group input,
 .control-group select {
     padding: 8px 12px;
@@ -149,7 +154,7 @@ button:hover {
 
 .element-symbol {
     position: absolute;
-    font-size: 24px;
+    font-size: 36px;
     opacity: 0.7;
 }
 
@@ -171,6 +176,40 @@ button:hover {
 .element-symbol.bottom-right {
     bottom: 10px;
     right: 10px;
+}
+
+.monster-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.monster-head {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.monster-eyes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.monster-mouth {
+    font-size: 24px;
 }
 
 .card.fire {
