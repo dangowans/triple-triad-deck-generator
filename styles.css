@@ -45,7 +45,8 @@ h1 {
     color: #555;
 }
 
-.control-group input {
+.control-group input,
+.control-group select {
     padding: 8px 12px;
     border: 2px solid #ddd;
     border-radius: 4px;
@@ -183,13 +184,62 @@ button:hover {
 }
 
 .card.wind {
-    background: linear-gradient(145deg, #f1f8e9, #dcedc8);
-    border-color: #689f38;
+    background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
+    border-color: #757575;
 }
 
 .card.earth {
-    background: linear-gradient(145deg, #efebe9, #d7ccc8);
-    border-color: #5d4037;
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    border-color: #2e7d32;
+}
+
+/* Element-specific card number outlines */
+.card.fire .card-number {
+    text-shadow: 
+        -2px -2px 0 #d32f2f,
+        2px -2px 0 #d32f2f,
+        -2px 2px 0 #d32f2f,
+        2px 2px 0 #d32f2f,
+        -3px 0 0 #d32f2f,
+        3px 0 0 #d32f2f,
+        0 -3px 0 #d32f2f,
+        0 3px 0 #d32f2f;
+}
+
+.card.water .card-number {
+    text-shadow: 
+        -2px -2px 0 #1976d2,
+        2px -2px 0 #1976d2,
+        -2px 2px 0 #1976d2,
+        2px 2px 0 #1976d2,
+        -3px 0 0 #1976d2,
+        3px 0 0 #1976d2,
+        0 -3px 0 #1976d2,
+        0 3px 0 #1976d2;
+}
+
+.card.wind .card-number {
+    text-shadow: 
+        -2px -2px 0 #757575,
+        2px -2px 0 #757575,
+        -2px 2px 0 #757575,
+        2px 2px 0 #757575,
+        -3px 0 0 #757575,
+        3px 0 0 #757575,
+        0 -3px 0 #757575,
+        0 3px 0 #757575;
+}
+
+.card.earth .card-number {
+    text-shadow: 
+        -2px -2px 0 #2e7d32,
+        2px -2px 0 #2e7d32,
+        -2px 2px 0 #2e7d32,
+        2px 2px 0 #2e7d32,
+        -3px 0 0 #2e7d32,
+        3px 0 0 #2e7d32,
+        0 -3px 0 #2e7d32,
+        0 3px 0 #2e7d32;
 }
 
 /* Print styles */

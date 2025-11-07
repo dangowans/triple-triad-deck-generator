@@ -202,6 +202,6 @@ document.getElementById('printBtn').addEventListener('click', () => {
 
 // Generate initial set of cards on load
 window.addEventListener('load', () => {
-    const cards = generateUniqueCards(10, 3);
+    const cards = generateUniqueCards(18, 3);
     renderCards(cards);
 });
