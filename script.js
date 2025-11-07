@@ -9,7 +9,7 @@ const ELEMENTS = {
 const elementNames = Object.keys(ELEMENTS);
 
 // Monster face components
-const MONSTER_EYES = ['👀', '👁️👁️', '◉◉', '●●', '○○', '◕◕', '◔◔', '◐◐'];
+const MONSTER_EYES = ['👀', '◉◉', '●●', '○○', '◕◕', '◔◔', '◐◐', '⊙⊙'];
 const MONSTER_MOUTHS = ['😃', '😄', '😁', '😊', '😆', '🙂', '😋', '😛', '😝', '😜'];
 const MONSTER_HEAD_SHAPES = ['circle', 'square', 'triangle', 'oval'];
 
@@ -20,6 +20,14 @@ const ELEMENT_SKIN_COLORS = {
     wind: '#e0e0e0',      // Light gray
     earth: '#8b6f47',     // Brown-ish
     none: '#f0f0f0'       // Default gray
+};
+
+// Border radius for different head shapes
+const HEAD_SHAPE_BORDER_RADIUS = {
+    circle: '50%',
+    square: '10%',
+    oval: '50% 50% 50% 50% / 60% 60% 40% 40%',
+    triangle: '50% 50% 0 0'
 };
 
 // Generate random monster face
@@ -189,10 +197,7 @@ function createCardElement(card, includeMonster = false) {
         const headDiv = document.createElement('div');
         headDiv.className = `monster-head ${monster.headShape}`;
         headDiv.style.backgroundColor = monster.skinColor;
-        headDiv.style.borderRadius = monster.headShape === 'circle' ? '50%' : 
-                                      monster.headShape === 'square' ? '10%' :
-                                      monster.headShape === 'oval' ? '50% 50% 50% 50% / 60% 60% 40% 40%' :
-                                      '50% 50% 0 0';
+        headDiv.style.borderRadius = HEAD_SHAPE_BORDER_RADIUS[monster.headShape];
         
         const eyesDiv = document.createElement('div');
         eyesDiv.className = 'monster-eyes';
