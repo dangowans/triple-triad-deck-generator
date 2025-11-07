@@ -8,12 +8,15 @@ const ELEMENTS = {
 
 const elementNames = Object.keys(ELEMENTS);
 
+// Constants for card generation
+const MAX_CARD_GENERATION_ATTEMPTS = 1000;
+const ATTEMPTS_MULTIPLIER = 100;
+
 // Generate a random card with 4 numbers that sum to 12
 function generateRandomCard(element = null) {
     // Generate 4 random numbers between 1 and 9 that sum to 12
     let numbers;
     let attempts = 0;
-    const maxAttempts = 1000;
     
     do {
         numbers = [];
@@ -32,7 +35,7 @@ function generateRandomCard(element = null) {
         numbers.push(remaining);
         
         attempts++;
-        if (attempts > maxAttempts) {
+        if (attempts >= MAX_CARD_GENERATION_ATTEMPTS) {
             // If we can't find a valid combination after many attempts,
             // return null to indicate failure rather than creating invalid duplicates
             return null;
@@ -69,7 +72,7 @@ function cardToString(card) {
 function generateUniqueCards(totalCards, elementalCards) {
     const cards = [];
     const cardSet = new Set();
-    const maxAttempts = totalCards * 100;
+    const maxAttempts = totalCards * ATTEMPTS_MULTIPLIER;
     let attempts = 0;
     
     // Generate elemental cards first
