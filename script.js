@@ -8,43 +8,6 @@ const ELEMENTS = {
 
 const elementNames = Object.keys(ELEMENTS);
 
-// Monster face components
-const MONSTER_EYES = ['👀', '◉◉', '●●', '○○', '◕◕', '◔◔', '◐◐', '⊙⊙'];
-const MONSTER_MOUTHS = ['◡', '◠', '⌣', '⌢', 'ω', 'v', 'u', '︵', '︶', '﹏'];
-const MONSTER_HEAD_SHAPES = ['circle', 'square', 'triangle', 'oval'];
-
-// Element to skin color mapping
-const ELEMENT_SKIN_COLORS = {
-    fire: '#ff6b6b',      // Red-ish
-    water: '#4dabf7',     // Blue-ish
-    wind: '#e0e0e0',      // Light gray
-    earth: '#8b6f47',     // Brown-ish
-    none: '#f0f0f0'       // Default gray
-};
-
-// Border radius for different head shapes
-const HEAD_SHAPE_BORDER_RADIUS = {
-    circle: '50%',
-    square: '10%',
-    oval: '50% 50% 50% 50% / 60% 60% 40% 40%',
-    triangle: '50% 50% 0 0'
-};
-
-// Generate random monster face
-function generateMonsterFace(element = null) {
-    const eyes = MONSTER_EYES[Math.floor(Math.random() * MONSTER_EYES.length)];
-    const mouth = MONSTER_MOUTHS[Math.floor(Math.random() * MONSTER_MOUTHS.length)];
-    const headShape = MONSTER_HEAD_SHAPES[Math.floor(Math.random() * MONSTER_HEAD_SHAPES.length)];
-    const skinColor = ELEMENT_SKIN_COLORS[element || 'none'];
-    
-    return {
-        eyes,
-        mouth,
-        headShape,
-        skinColor
-    };
-}
-
 // Constants for card generation
 const MAX_CARD_GENERATION_ATTEMPTS = 1000;
 const ATTEMPTS_MULTIPLIER = 100;
@@ -156,7 +119,7 @@ function generateUniqueCards(totalCards, elementalCards) {
 }
 
 // Create HTML for a card
-function createCardElement(card, includeMonster = false) {
+function createCardElement(card) {
     const cardDiv = document.createElement('div');
     cardDiv.className = 'card';
     
@@ -188,42 +151,17 @@ function createCardElement(card, includeMonster = false) {
         });
     }
     
-    // Add monster face if enabled
-    if (includeMonster) {
-        const monster = generateMonsterFace(card.element);
-        const monsterDiv = document.createElement('div');
-        monsterDiv.className = 'monster-face';
-        
-        const headDiv = document.createElement('div');
-        headDiv.className = `monster-head ${monster.headShape}`;
-        headDiv.style.backgroundColor = monster.skinColor;
-        headDiv.style.borderRadius = HEAD_SHAPE_BORDER_RADIUS[monster.headShape];
-        
-        const eyesDiv = document.createElement('div');
-        eyesDiv.className = 'monster-eyes';
-        eyesDiv.textContent = monster.eyes;
-        
-        const mouthDiv = document.createElement('div');
-        mouthDiv.className = 'monster-mouth';
-        mouthDiv.textContent = monster.mouth;
-        
-        headDiv.appendChild(eyesDiv);
-        headDiv.appendChild(mouthDiv);
-        monsterDiv.appendChild(headDiv);
-        cardInner.appendChild(monsterDiv);
-    }
-    
     cardDiv.appendChild(cardInner);
     return cardDiv;
 }
 
 // Render cards to the container
-function renderCards(cards, includeMonster = false) {
+function renderCards(cards) {
     const container = document.getElementById('cardContainer');
     container.innerHTML = '';
     
     cards.forEach(card => {
-        const cardElement = createCardElement(card, includeMonster);
+        const cardElement = createCardElement(card);
         container.appendChild(cardElement);
     });
 }
@@ -232,7 +170,6 @@ function renderCards(cards, includeMonster = false) {
 document.getElementById('generateBtn').addEventListener('click', () => {
     const totalCards = parseInt(document.getElementById('totalCards').value);
     const elementalCards = parseInt(document.getElementById('elementalCards').value);
-    const includeMonster = document.getElementById('monsterFaces').checked;
     
     // Validation
     if (isNaN(totalCards) || totalCards < 1) {
@@ -256,7 +193,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
         alert(`Warning: Could only generate ${cards.length} unique cards out of ${totalCards} requested`);
     }
     
-    renderCards(cards, includeMonster);
+    renderCards(cards);
 });
 
 document.getElementById('printBtn').addEventListener('click', () => {
