@@ -25,7 +25,8 @@ function generateRandomCard(element = null) {
         // Generate first 3 numbers
         for (let i = 0; i < 3; i++) {
             const min = 1;
-            const max = Math.min(9, remaining - (3 - i)); // Ensure we can still make valid remaining numbers
+            const numbersLeft = 3 - i; // How many more numbers we need to generate after this one
+            const max = Math.min(9, remaining - numbersLeft); // Ensure we can still make valid remaining numbers
             const num = Math.floor(Math.random() * (max - min + 1)) + min;
             numbers.push(num);
             remaining -= num;
@@ -171,18 +172,18 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     const elementalCards = parseInt(document.getElementById('elementalCards').value);
     
     // Validation
-    if (totalCards < 1) {
+    if (isNaN(totalCards) || totalCards < 1) {
         alert('Total cards must be at least 1');
+        return;
+    }
+    
+    if (isNaN(elementalCards) || elementalCards < 0) {
+        alert('Elemental cards must be 0 or greater');
         return;
     }
     
     if (elementalCards > totalCards) {
         alert('Elemental cards cannot exceed total cards');
-        return;
-    }
-    
-    if (elementalCards < 0) {
-        alert('Elemental cards cannot be negative');
         return;
     }
     
