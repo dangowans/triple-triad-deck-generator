@@ -33,9 +33,9 @@ function generateRandomCard(element = null) {
         
         attempts++;
         if (attempts > maxAttempts) {
-            // Fallback to a simple valid combination
-            numbers = [3, 3, 3, 3];
-            break;
+            // If we can't find a valid combination after many attempts,
+            // return null to indicate failure rather than creating invalid duplicates
+            return null;
         }
     } while (numbers[3] < 1 || numbers[3] > 9); // Ensure the last number is valid
     
@@ -60,9 +60,8 @@ function shuffleArray(array) {
 }
 
 // Convert card to a string for uniqueness checking
+// Creates a string representation using exact positions to ensure uniqueness
 function cardToString(card) {
-    // Sort the numbers to treat cards with same numbers in different positions as different
-    // But we need to check exact position matches for true uniqueness
     return `${card.top}-${card.left}-${card.right}-${card.bottom}-${card.element || 'none'}`;
 }
 
@@ -78,6 +77,12 @@ function generateUniqueCards(totalCards, elementalCards) {
     while (elementalCount < elementalCards && attempts < maxAttempts) {
         const element = elementNames[Math.floor(Math.random() * elementNames.length)];
         const card = generateRandomCard(element);
+        
+        if (!card) {
+            attempts++;
+            continue;
+        }
+        
         const cardStr = cardToString(card);
         
         if (!cardSet.has(cardStr)) {
@@ -91,6 +96,12 @@ function generateUniqueCards(totalCards, elementalCards) {
     // Generate non-elemental cards
     while (cards.length < totalCards && attempts < maxAttempts) {
         const card = generateRandomCard(null);
+        
+        if (!card) {
+            attempts++;
+            continue;
+        }
+        
         const cardStr = cardToString(card);
         
         if (!cardSet.has(cardStr)) {
