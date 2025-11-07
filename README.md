@@ -27,6 +27,17 @@ A way to generate a deck of cards for the Triple Triad card game.
 - Elemental cards display their element symbol in all four corners
 - Available elements: fire, water, wind, earth
 
+## Traditional Element Cycle
+
+In Triple Triad, elemental cards have advantages when placed next to cards of certain elements:
+
+| Element | Strong Against | Weak Against |
+| ------- | -------------- | ------------ |
+| Fire    | Wind           | Water        |
+| Water   | Fire           | Earth        |
+| Earth   | Water          | Wind         |
+| Wind    | Earth          | Fire         |
+
 ## Technical Details
 
 - Pure HTML, CSS, and JavaScript - no dependencies required
