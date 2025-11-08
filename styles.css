@@ -82,19 +82,19 @@ button:hover {
     background: #0b7dda;
 }
 
+.accessories-link-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
 .accessories-link {
-    padding: 10px 20px;
-    background: #FF9800;
-    color: white;
+    color: #2196F3;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 16px;
-    display: inline-block;
-    transition: background 0.3s;
+    font-size: 14px;
 }
 
 .accessories-link:hover {
-    background: #F57C00;
+    text-decoration: underline;
 }
 
 .card-container {
