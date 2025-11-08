@@ -89,37 +89,30 @@ body {
     width: 100%;
     aspect-ratio: 11/15; /* Slightly larger ratio to give cards extra space (220/300) */
     min-height: 300px;
-    border: 2px solid #333;
+    border: none;
     background: white;
     position: relative;
 }
 
-/* Remove double borders between cells */
+/* Tic-tac-toe style: only internal borders (no outer border) */
+/* Right border for left and center columns */
+.grid-cell:nth-child(1),
+.grid-cell:nth-child(4),
+.grid-cell:nth-child(7),
 .grid-cell:nth-child(2),
-.grid-cell:nth-child(3) {
-    border-left: none;
+.grid-cell:nth-child(5),
+.grid-cell:nth-child(8) {
+    border-right: 2px solid #333;
 }
 
+/* Bottom border for top and middle rows */
+.grid-cell:nth-child(1),
+.grid-cell:nth-child(2),
+.grid-cell:nth-child(3),
 .grid-cell:nth-child(4),
 .grid-cell:nth-child(5),
 .grid-cell:nth-child(6) {
-    border-top: none;
-}
-
-.grid-cell:nth-child(5),
-.grid-cell:nth-child(6) {
-    border-left: none;
-}
-
-.grid-cell:nth-child(7),
-.grid-cell:nth-child(8),
-.grid-cell:nth-child(9) {
-    border-top: none;
-}
-
-.grid-cell:nth-child(8),
-.grid-cell:nth-child(9) {
-    border-left: none;
+    border-bottom: 2px solid #333;
 }
 
 /* Tokens Section */
