@@ -24,11 +24,13 @@ Decide who goes first.
 
 ## Basic Rules
 
-For a two player game on a 3x3 grid,
+Depending on the number of players and tge grid size, the size of each player's hand varies.
+
+- For a two player game on a 3x3 grid,
 each player takes five cards from their deck.
-For a three player game on a 4x4 grid,
+- For a three player game on a 4x4 grid,
 each player takes five cards from their deck.
-For a four player game on a 4x4 grid,
+- For a four player game on a 4x4 grid,
 each player takes four cards from their deck.
 
 On a player's turn,
@@ -38,7 +40,8 @@ The player marks that card as theirs
 by placing their token color face up
 on the middle of their card.
 
-If the player's card is next to another player's
+If the player's card is placed next
+to another player's
 previously placed card,
 and the number closest to the number
 on the previous card is larger,
@@ -46,8 +49,8 @@ the token on the previous card changes to
 the color of the current player.
 
 Play continues until the grid is full.
-In a three player game on a 4x4 grid,
-one space will be left over in the grid.
+*In a three player game on a 4x4 grid,
+one space will be left over in the grid.*
 
 The player with the most cards marked
 with their token in the end wins the match.
@@ -82,3 +85,17 @@ potential token flip. If the Fire card
 is placed next to a Water card,
 the Fire card gets a one point
 disadvantage.
+
+| Element | Strong Against | Weak Against |
+| ------- | -------------- | ------------ |
+| Fire 🔥 | Wind 🌪️       | Water 💧     |
+| Water 💧 | Fire 🔥       | Earth 🌍     |
+| Earth 🌍 | Water 💧      | Wind 🌪️     |
+| Wind 🌪️ | Earth 🌍      | Fire 🔥      |
+
+### Win Rules
+
+Instead of the winner getting all of the cards:
+
+- Each player could collect all the cards
+  marked with their token.
