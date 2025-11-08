@@ -97,6 +97,12 @@ button:hover {
     text-decoration: underline;
 }
 
+.link-separator {
+    color: #999;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
