@@ -82,6 +82,21 @@ button:hover {
     background: #0b7dda;
 }
 
+.accessories-link-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.accessories-link {
+    color: #2196F3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.accessories-link:hover {
+    text-decoration: underline;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
