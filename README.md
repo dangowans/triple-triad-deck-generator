@@ -16,8 +16,9 @@ A way to generate a deck of cards for the Triple Triad card game.
 1. Open `index.html` in a web browser
 2. Set the number of total cards you want to generate (1-50)
 3. Set the number of elemental cards (0 to total cards)
-4. Click "Generate Cards" to create a new set of random cards
-5. Click "Print Cards" to print the cards
+4. Cards will automatically regenerate when you change these values
+5. Click "Regenerate Cards" to manually create a new set of random cards
+6. Click "Print Cards" to print the cards
 
 ## Card Rules
 
