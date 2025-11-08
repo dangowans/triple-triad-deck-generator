@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple Triad - Game Rules</title>
+    <link rel="stylesheet" href="game-rules.css">
+</head>
+<body>
+    <div class="no-print controls">
+        <h1>Triple Triad Game Rules</h1>
+        <p>Learn how to play Triple Triad</p>
+        <a href="index.html">Back to Card Generator</a>
+    </div>
+
+    <div class="rules-content">
+        <h1>Game Rules</h1>
+        
+        <p class="intro">Triple Triad is an easy-to-play card game.</p>
+
+        <h2>Initial Setup</h2>
+        
+        <div class="setup-step">
+            <h3>Print out some cards.</h3>
+            <p>You likely want at least 15 cards per player.</p>
+        </div>
+
+        <div class="setup-step">
+            <h3>Print out or create a grid.</h3>
+            <p>For a two player game, a 3x3 grid is fine. For a three or four player game, a 4x4 grid is better.</p>
+        </div>
+
+        <div class="setup-step">
+            <h3>Print out or create some tokens.</h3>
+            <p>Coins work too. Basically, a way to mark the card's current player.</p>
+        </div>
+
+        <h2>Getting Started</h2>
+        
+        <ul>
+            <li>Assign each player a token color.</li>
+            <li>Deal each player an even number of cards.</li>
+            <li>Decide who goes first.</li>
+        </ul>
+
+        <h2>Basic Rules</h2>
+        
+        <p>Depending on the number of players and the grid size, the size of each player's hand varies.</p>
+
+        <ul>
+            <li>For a two player game on a 3x3 grid, each player takes five cards from their deck.</li>
+            <li>For a three player game on a 4x4 grid, each player takes five cards from their deck.</li>
+            <li>For a four player game on a 4x4 grid, each player takes four cards from their deck.</li>
+        </ul>
+
+        <p>On a player's turn, a player places one card from their cards in an empty cell on the grid. The player marks that card as theirs by placing their token color face up on the middle of their card.</p>
+
+        <p>If the player's card is placed next to another player's previously placed card, and the number closest to the number on the previous card is larger, the token on the previous card changes to the color of the current player.</p>
+
+        <p>Play continues until the grid is full. <em>In a three player game on a 4x4 grid, one space will be left over in the grid.</em></p>
+
+        <p>The player with the most cards marked with their token in the end wins the match. That player adds all of the cards on the grid to their deck.</p>
+
+        <p>The loser picks who will play first in the next game.</p>
+
+        <h2>Optional Additional Rules</h2>
+
+        <h3>Cascade Rule</h3>
+        
+        <p>With the cascade rule, if any card changes token color, the cards next to the changed card are also considered for switching token color if the cards next to the switched card are lesser.</p>
+
+        <h3>Elemental Rules</h3>
+        
+        <p>With the elemental rules, all changes are given a one point advantage (or disadvantage) if the cards have competing elemental icons.</p>
+
+        <p>For example, if a Fire card is placed next to a Wind card, the Fire card gets a one point advantage in the potential token flip. If the Fire card is placed next to a Water card, the Fire card gets a one point disadvantage.</p>
+
+        <table class="element-table">
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Strong Against</th>
+                    <th>Weak Against</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fire 🔥</td>
+                    <td>Wind 🌪️</td>
+                    <td>Water 💧</td>
+                </tr>
+                <tr>
+                    <td>Water 💧</td>
+                    <td>Fire 🔥</td>
+                    <td>Earth 🌍</td>
+                </tr>
+                <tr>
+                    <td>Earth 🌍</td>
+                    <td>Water 💧</td>
+                    <td>Wind 🌪️</td>
+                </tr>
+                <tr>
+                    <td>Wind 🌪️</td>
+                    <td>Earth 🌍</td>
+                    <td>Fire 🔥</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Win Rules</h3>
+        
+        <p>Instead of the winner getting all of the cards:</p>
+
+        <ul>
+            <li>Each player could collect all the cards marked with their token.</li>
+        </ul>
+    </div>
+</body>
+</html>
