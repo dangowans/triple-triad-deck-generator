@@ -78,7 +78,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1.2fr 1fr;
     gap: 0;
     width: 100%;
     max-width: 720px;
