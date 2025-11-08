@@ -88,7 +88,7 @@ body {
 .grid-cell {
     width: 100%;
     aspect-ratio: 11/15; /* Slightly larger ratio to give cards extra space (220/300) */
-    min-height: 300px;
+    min-height: 320px;
     border: none;
     background: white;
     position: relative;
@@ -102,7 +102,7 @@ body {
 .grid-cell:nth-child(2),
 .grid-cell:nth-child(5),
 .grid-cell:nth-child(8) {
-    border-right: 2px solid #333;
+    border-right: 3px solid #333;
 }
 
 /* Bottom border for top and middle rows */
@@ -112,7 +112,7 @@ body {
 .grid-cell:nth-child(4),
 .grid-cell:nth-child(5),
 .grid-cell:nth-child(6) {
-    border-bottom: 2px solid #333;
+    border-bottom: 3px solid #333;
 }
 
 /* Tokens Section */
@@ -199,7 +199,7 @@ body {
 
     .printable-content {
         max-width: 100%;
-        padding: 0.4in;
+        padding: 0.25in;
     }
 
     .board-title {
@@ -225,7 +225,7 @@ body {
     }
 
     .grid-cell {
-        min-height: 270px; /* Approximately 300px scaled for print */
+        min-height: 300px; /* Increased size for better card placement */
     }
 
     .tokens-grid {
@@ -245,7 +245,7 @@ body {
     }
 
     @page {
-        margin: 0.4in;
+        margin: 0.25in;
         size: letter;
     }
 }
