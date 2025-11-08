@@ -208,7 +208,7 @@ body {
 
     .printable-content {
         max-width: 100%;
-        padding: 10mm;
+        padding: 0.4in;
     }
 
     .board-title,
@@ -227,7 +227,7 @@ body {
     }
 
     .grid {
-        max-width: 198mm;
+        max-width: 7.2in;
     }
 
     .grid-cell {
@@ -235,12 +235,12 @@ body {
     }
 
     .tokens-grid {
-        max-width: 198mm;
+        max-width: 7.2in;
     }
 
     @page {
-        margin: 10mm;
-        size: A4;
+        margin: 0.4in;
+        size: letter;
     }
 }
 
