@@ -2,6 +2,8 @@
 
 A way to generate a deck of cards for the Triple Triad card game.
 
+[Game Rules](./GAME-RULES.md)
+
 ## Features
 
 - Generate random Triple Triad cards with 4 numbers (top, left, right, bottom) between 1-9
