@@ -166,8 +166,8 @@ function renderCards(cards) {
     });
 }
 
-// Event listeners
-document.getElementById('generateBtn').addEventListener('click', () => {
+// Function to generate and render cards based on current input values
+function generateAndRenderCards() {
     const totalCards = parseInt(document.getElementById('totalCards').value);
     const elementalCards = parseInt(document.getElementById('elementalCards').value);
     
@@ -194,7 +194,16 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     }
     
     renderCards(cards);
-});
+}
+
+// Event listeners
+document.getElementById('generateBtn').addEventListener('click', generateAndRenderCards);
+
+// Auto-regenerate when total cards dropdown changes
+document.getElementById('totalCards').addEventListener('change', generateAndRenderCards);
+
+// Auto-regenerate when elemental cards input changes
+document.getElementById('elementalCards').addEventListener('change', generateAndRenderCards);
 
 document.getElementById('printBtn').addEventListener('click', () => {
     window.print();
