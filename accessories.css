@@ -144,8 +144,8 @@ body {
 .tokens-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    max-width: 800px;
+    gap: 15px;
+    max-width: 7.5in;
     margin: 0 auto;
 }
 
@@ -165,7 +165,7 @@ body {
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     border: 3px solid #333;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
@@ -191,29 +191,49 @@ body {
 
 .reference-row {
     display: grid;
-    grid-template-columns: 6fr 2fr 6fr;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 12px;
     align-items: center;
     padding: 5px 0;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .ref-element {
     font-weight: bold;
     color: #333;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .ref-arrow {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: normal;
     color: #999;
     text-align: center;
+    white-space: nowrap;
 }
 
 .ref-target {
     font-weight: bold;
     color: #555;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.ref-icon {
+    font-size: 24px;
+    display: block;
+}
+
+.ref-label {
+    font-size: 12px;
+    display: block;
 }
 
 .token {
@@ -263,7 +283,8 @@ body {
 
     .printable-content {
         max-width: 100%;
-        padding: 0.25in;
+        padding: 0;
+        margin: 0 auto;
     }
 
     .board-title {
@@ -287,6 +308,7 @@ body {
     .game-board {
         page-break-after: auto;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .tokens-section {
@@ -294,7 +316,8 @@ body {
     }
 
     .grid {
-        max-width: 7.2in;
+        max-width: 6.5in;
+        margin: 0 auto;
     }
 
     .grid-cell {
@@ -302,7 +325,7 @@ body {
     }
 
     .tokens-grid {
-        max-width: 7.2in;
+        max-width: 7.5in;
     }
 
     .token.red {
