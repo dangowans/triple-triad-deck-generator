@@ -191,7 +191,7 @@ body {
 
 .reference-row {
     display: grid;
-    grid-template-columns: 5fr 1fr 5fr;
+    grid-template-columns: 6fr 2fr 6fr;
     align-items: center;
     padding: 5px 0;
     font-size: 15px;
@@ -204,16 +204,16 @@ body {
 }
 
 .ref-arrow {
-    font-size: 18px;
-    font-weight: bold;
-    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+    color: #999;
     text-align: center;
 }
 
 .ref-target {
     font-weight: bold;
     color: #555;
-    text-align: right;
+    text-align: left;
 }
 
 .token {
