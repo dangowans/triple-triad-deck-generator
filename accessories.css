@@ -306,13 +306,13 @@ body {
     }
 
     .game-board {
-        page-break-after: auto;
+        page-break-after: always;
         margin-bottom: 20px;
         text-align: center;
     }
 
     .tokens-section {
-        page-break-before: auto;
+        page-break-before: always;
     }
 
     .grid {
