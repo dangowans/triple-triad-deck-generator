@@ -33,10 +33,10 @@ In Triple Triad, elemental cards have advantages when placed next to cards of ce
 
 | Element | Strong Against | Weak Against |
 | ------- | -------------- | ------------ |
-| Fire    | Wind           | Water        |
-| Water   | Fire           | Earth        |
-| Earth   | Water          | Wind         |
-| Wind    | Earth          | Fire         |
+| Fire 🔥 | Wind 🌪️       | Water 💧     |
+| Water 💧 | Fire 🔥       | Earth 🌍     |
+| Earth 🌍 | Water 💧      | Wind 🌪️     |
+| Wind 🌪️ | Earth 🌍      | Fire 🔥      |
 
 ## Technical Details
 

@@ -121,6 +121,98 @@ body {
     page-break-before: avoid;
 }
 
+/* Element Reference Cards Section */
+.reference-cards-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+}
+
+.reference-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.reference-instructions {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.reference-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.reference-card {
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border: 3px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+}
+
+.reference-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #666;
+}
+
+.reference-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.reference-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.ref-element {
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+}
+
+.ref-arrow {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    margin: 0 5px;
+}
+
+.ref-target {
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+    text-align: right;
+}
+
+/* Tokens Section */
+.tokens-section {
+    margin-top: 40px;
+    page-break-before: avoid;
+}
+
 .tokens-title {
     text-align: center;
     margin-bottom: 10px;
@@ -209,6 +301,20 @@ body {
     .tokens-title,
     .tokens-instructions {
         color: #000;
+    }
+
+    .reference-title,
+    .reference-instructions {
+        color: #000;
+    }
+
+    .reference-cards-section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .reference-card {
+        box-shadow: none;
     }
 
     .game-board {
