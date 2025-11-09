@@ -59,6 +59,10 @@ h1 {
     width: 80px;
 }
 
+#cardLevel {
+    width: 150px;
+}
+
 button {
     padding: 10px 20px;
     background: #4CAF50;
