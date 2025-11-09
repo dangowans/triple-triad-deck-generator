@@ -6,6 +6,15 @@ Triple Triad is an easy-to-play card game.
 
 **Print out some cards.**
 You likely want at least 15 cards per player.
+If printing cards of multiple 
+levels, you would likely want the two
+levels to be beside each other, like 2 and 3, and enough cards of each to ensure
+one player doesn't have all cards from a
+higher level than the others.
+If low on cards, all of the cards could
+remain in a central deck,
+and the winner of each round could
+get one point.
 
 **Print out or create a grid.**
 For a two player game, a 3x3 grid is fine.
@@ -19,12 +28,22 @@ the card's current player.
 ## Getting Started
 
 Assign each player a token color.
-Deal each player an even number of cards.
+
+Give each player an even number of cards.
+This can be done by a random deal,
+or players can select their cards from
+what is available.
+Ensure though that the decks stay balanced,
+so one player does not have all of the
+higher level cards.
+
 Decide who goes first.
 
 ## Basic Rules
 
-Depending on the number of players and tge grid size, the size of each player's hand varies.
+Depending on the number of players and
+the grid size, the size of each player's
+hand varies.
 
 - For a two player game on a 3x3 grid,
 each player takes five cards from their deck.
