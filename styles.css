@@ -173,6 +173,18 @@ button:hover {
     transform: translateX(-50%);
 }
 
+.card-level {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(128, 128, 128, 0.3);
+    text-shadow: none;
+    pointer-events: none;
+}
+
 .element-symbol {
     position: absolute;
     font-size: 36px;
